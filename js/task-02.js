@@ -22,6 +22,7 @@ listEl.append(...elements)
 
 //?--------------------Вариант 2--------------------------
 /* 
+const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments']
 const list = document.querySelector('#ingredients');
 const arrayForNewElem = [];
 
@@ -37,5 +38,19 @@ function createLiForIngr(array) {
 createLiForIngr(ingredients);
 list.append(...arrayForNewElem);
 */
+//?--------------------Вариант 3--------------------------
+/* 
+const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments']
 
+const list = document.querySelector('#ingredients')
+const liArray = []
 
+ingredients.forEach(ingredient => {
+	const item = document.createElement('li')
+	item.className = 'item'
+	item.textContent = ingredient
+	liArray.push(item)
+})
+
+list.append(...liArray)
+ */
